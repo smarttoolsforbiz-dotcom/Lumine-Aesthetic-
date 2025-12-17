@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Generate Placeholder Images</title>
+    <style>
+        body { font-family: Arial; padding: 20px; background: #f5f5f5; }
+        .container { max-width: 800px; margin: 0 auto; background: white; padding: 30px; border-radius: 10px; }
+        button { background: #c9a78e; color: white; padding: 15px 30px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; margin: 10px 0; }
+        button:hover { background: #a88970; }
+        .status { margin: 20px 0; padding: 15px; background: #e8f5e9; border-left: 4px solid #4caf50; }
+        .info { background: #fff3cd; border-left: 4px solid #ffc107; padding: 15px; margin: 20px 0; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎨 Medical Spa Website - Placeholder Image Generator</h1>
+        
+        <div class="info">
+            <strong>Note:</strong> This page will generate placeholder images for your website so it displays properly while you gather professional photos.
+        </div>
+
+        <h2>Quick Setup Options:</h2>
+        
+        <button onclick="generateAll()">🚀 Generate All Placeholders</button>
+        <button onclick="useStockPhotos()">📸 Use Free Stock Photos (Recommended)</button>
+        
+        <div id="status"></div>
+
+        <h2>What You'll Get:</h2>
+        <ul>
+            <li>Hero background image</li>
+            <li>8 service images (Botox, Fillers, Laser, etc.)</li>
+            <li>12 before/after result images</li>
+            <li>Team photos</li>
+            <li>Testimonial photos</li>
+            <li>Instagram post images</li>
+            <li>Certification badges</li>
+        </ul>
+
+        <h2>Or Download Free Stock Photos:</h2>
+        <div style="background: #f9f9f9; padding: 20px; border-radius: 5px;">
+            <h3>Recommended Sources (All Free):</h3>
+            <p><strong>1. Unsplash:</strong> <a href="https://unsplash.com/s/photos/medical-spa" target="_blank">Medical Spa Photos</a></p>
+            <p><strong>2. Pexels:</strong> <a href="https://www.pexels.com/search/beauty%20clinic/" target="_blank">Beauty Clinic Photos</a></p>
+            <p><strong>3. Pixabay:</strong> <a href="https://pixabay.com/images/search/spa/" target="_blank">Spa Photos</a></p>
+            
+            <h4>Quick Download List:</h4>
+            <ol>
+                <li>Hero: Search "luxury spa interior" - Download 1920x1080</li>
+                <li>Services: Search each treatment name - Download 800x600</li>
+                <li>Results: Search "before after skin treatment" - Download 600x800</li>
+                <li>Team: Search "doctor professional" - Download 800x800</li>
+            </ol>
+        </div>
+    </div>
+
+    <script>
+        function generateAll() {
+            document.getElementById('status').innerHTML = `
+                <div class="status">
+                    <h3>✅ Instructions to Generate Images:</h3>
+                    <p>Since we can't generate actual images in this HTML file, here are your options:</p>
+                    <ol>
+                        <li><strong>Use the Python script:</strong> Run "python generate_images.py" from terminal</li>
+                        <li><strong>Download stock photos:</strong> Use the links above (5 minutes)</li>
+                        <li><strong>Use placeholder service:</strong> Visit placeholder.com for temp images</li>
+                    </ol>
+                </div>
+            `;
+        }
+
+        function useStockPhotos() {
+            window.open('https://unsplash.com/s/photos/medical-spa', '_blank');
+            document.getElementById('status').innerHTML = `
+                <div class="status">
+                    <h3>📸 Stock Photo Guide Opened!</h3>
+                    <p>Download high-quality photos and save them to your /images folder with these names:</p>
+                    <ul>
+                        <li>hero-background.jpg (1920x1080)</li>
+                        <li>services/botox.jpg, fillers.jpg, laser.jpg, etc. (800x600)</li>
+                        <li>results/[treatment]-before.jpg and [treatment]-after.jpg (600x800)</li>
+                        <li>about/medical-director.jpg (800x800)</li>
+                    </ul>
+                </div>
+            `;
+        }
+    </script>
+</body>
+</html>
